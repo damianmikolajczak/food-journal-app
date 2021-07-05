@@ -11,13 +11,14 @@ class AddFoodViewController: UIViewController {
 
     private let foodImage: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = .systemPink // Change it later
+        image.backgroundColor = .lightGray // Change it later
+        
         return image
     }()
     
     private let descriptionFieldLabel: UILabel = {
         let label = UILabel()
-        label.text = "Add description to the photo"
+        label.text = "Add some description below"
         label.textColor = .lightGray
         return label
     }()
@@ -25,7 +26,8 @@ class AddFoodViewController: UIViewController {
     private let descriptionField: UITextField = {
         let textField = UITextField()
         textField.textColor = .black
-        textField.text = "Some text"
+        textField.placeholder = "Describe your food"
+        textField.backgroundColor = .white
         textField.borderStyle = .roundedRect
         return textField
     }()
@@ -45,6 +47,10 @@ class AddFoodViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         addHiddingKeyboard()
+        
+        // Setting the navigation bar
+        self.navigationItem.title = "Food entry"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(takePhoto))
         
         // Setting the foot image's view
         view.addSubview(foodImage)
@@ -82,6 +88,24 @@ class AddFoodViewController: UIViewController {
 
     @objc func addFoodJournal() {
         print("Added")
+    }
+    
+    @objc func takePhoto() {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        picker.sourceType = .camera
+        picker.modalPresentationStyle = .fullScreen
+        present(picker, animated: true, completion: nil)
+    }
+}
+
+extension AddFoodViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let pickedImage = info[.editedImage] as? UIImage else { return }
+        
+        self.foodImage.image = pickedImage
+        picker.dismiss(animated: true, completion: nil)
     }
 }
 
