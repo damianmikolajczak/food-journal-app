@@ -26,6 +26,7 @@ class AddFoodViewController: UIViewController {
         let textField = UITextField()
         textField.textColor = .black
         textField.text = "Some text"
+        textField.borderStyle = .roundedRect
         return textField
     }()
     
@@ -43,38 +44,56 @@ class AddFoodViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        addHiddingKeyboard()
         
         // Setting the foot image's view
         view.addSubview(foodImage)
         foodImage.translatesAutoresizingMaskIntoConstraints = false
-        foodImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20.0).isActive = true
-        foodImage.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: 20.0).isActive = true
+        foodImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30.0).isActive = true
+        foodImage.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30.0).isActive = true
+        foodImage.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30.0).isActive = true
         foodImage.addConstraint(NSLayoutConstraint(item: foodImage, attribute: .height, relatedBy: .equal, toItem: foodImage, attribute: .width, multiplier: 1.0, constant: 0.0))
         
         
         // Setting the label for the description text field
         view.addSubview(descriptionFieldLabel)
         descriptionFieldLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionFieldLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20.0).isActive = true
-        descriptionFieldLabel.topAnchor.constraint(equalTo: foodImage.bottomAnchor, constant: 20.0).isActive = true
+        descriptionFieldLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30.0).isActive = true
+        descriptionFieldLabel.topAnchor.constraint(equalTo: foodImage.bottomAnchor, constant: 30.0).isActive = true
         
         // Setting the description text field
         view.addSubview(descriptionField)
         descriptionField.translatesAutoresizingMaskIntoConstraints = false
-        descriptionField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20.0).isActive = true
-        descriptionField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 20.0).isActive = true
-        descriptionField.topAnchor.constraint(equalTo: descriptionFieldLabel.bottomAnchor, constant: 20.0).isActive = true
+        descriptionField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30.0).isActive = true
+        descriptionField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30.0).isActive = true
+        descriptionField.topAnchor.constraint(equalTo: descriptionFieldLabel.bottomAnchor, constant: 15.0).isActive = true
         
         // Setting the button
         view.addSubview(doneButton)
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         doneButton.heightAnchor.constraint(equalToConstant: 45.0).isActive = true
-        doneButton.widthAnchor.constraint(equalToConstant: 250.0).isActive = true
-        doneButton.topAnchor.constraint(equalTo: descriptionField.bottomAnchor, constant: 20.0).isActive = true
+        doneButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
+        doneButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30).isActive = true
+        doneButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30.0).isActive = true
         doneButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        doneButton.addTarget(self, action: #selector(addFoodJournal), for: .touchUpInside)
         
     }
 
+    @objc func addFoodJournal() {
+        print("Added")
+    }
+}
 
+extension AddFoodViewController {
+    func addHiddingKeyboard() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
 }
 
