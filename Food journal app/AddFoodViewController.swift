@@ -49,6 +49,7 @@ class AddFoodViewController: UIViewController {
         foodImage.translatesAutoresizingMaskIntoConstraints = false
         foodImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20.0).isActive = true
         foodImage.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: 20.0).isActive = true
+        foodImage.addConstraint(NSLayoutConstraint(item: foodImage, attribute: .height, relatedBy: .equal, toItem: foodImage, attribute: .width, multiplier: 1.0, constant: 0.0))
         
         
         // Setting the label for the description text field
