@@ -13,6 +13,7 @@
 		2D18978A2693504000252B44 /* Food_journal_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897882693504000252B44 /* Food_journal_app.xcdatamodeld */; };
 		2D18978C2693504700252B44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D18978B2693504700252B44 /* Assets.xcassets */; };
 		2D18978F2693504700252B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D18978D2693504700252B44 /* LaunchScreen.storyboard */; };
+		2D1897972693C57400252B44 /* FoodEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897962693C57400252B44 /* FoodEntryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2D18978B2693504700252B44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D18978E2693504700252B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D1897902693504700252B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D1897962693C57400252B44 /* FoodEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodEntryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				2D18977F2693504000252B44 /* AppDelegate.swift */,
 				2D1897812693504000252B44 /* SceneDelegate.swift */,
+				2D1897962693C57400252B44 /* FoodEntryCell.swift */,
 				2D1897832693504000252B44 /* AddFoodViewController.swift */,
 				2D18978B2693504700252B44 /* Assets.xcassets */,
 				2D18978D2693504700252B44 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 				2D1897842693504000252B44 /* AddFoodViewController.swift in Sources */,
 				2D1897802693504000252B44 /* AppDelegate.swift in Sources */,
 				2D1897822693504000252B44 /* SceneDelegate.swift in Sources */,
+				2D1897972693C57400252B44 /* FoodEntryCell.swift in Sources */,
 				2D18978A2693504000252B44 /* Food_journal_app.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

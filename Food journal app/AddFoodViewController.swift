@@ -9,6 +9,8 @@ import UIKit
 
 class AddFoodViewController: UIViewController {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     private let foodImage: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .lightGray // Change it later
@@ -87,7 +89,8 @@ class AddFoodViewController: UIViewController {
     }
 
     @objc func addFoodJournal() {
-        print("Added")
+        guard let _ = foodImage.image, let _ = descriptionField.text else { return }
+        
     }
     
     @objc func takePhoto() {
