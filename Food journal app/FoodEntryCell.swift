@@ -31,8 +31,17 @@ class FoodEntryCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        self.heightAnchor.constraint(equalToConstant: 100.0).isActive = true
         
         // Setting the image
         contentView.addSubview(foodImage)
@@ -52,16 +61,12 @@ class FoodEntryCell: UITableViewCell {
         // Setting the date
         contentView.addSubview(entryDate)
         entryDate.translatesAutoresizingMaskIntoConstraints = false
-        entryDate.topAnchor.constraint(equalTo: foodDescription.topAnchor, constant: 10.0).isActive = true
         entryDate.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 10.0).isActive = true
         entryDate.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10.0).isActive = true
-        
+        entryDate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10.0).isActive = true
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-
 }
