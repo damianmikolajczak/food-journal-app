@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D1897802693504000252B44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18977F2693504000252B44 /* AppDelegate.swift */; };
 		2D1897822693504000252B44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897812693504000252B44 /* SceneDelegate.swift */; };
-		2D1897842693504000252B44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897832693504000252B44 /* ViewController.swift */; };
-		2D1897872693504000252B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1897852693504000252B44 /* Main.storyboard */; };
+		2D1897842693504000252B44 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897832693504000252B44 /* AddFoodViewController.swift */; };
 		2D18978A2693504000252B44 /* Food_journal_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897882693504000252B44 /* Food_journal_app.xcdatamodeld */; };
 		2D18978C2693504700252B44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D18978B2693504700252B44 /* Assets.xcassets */; };
 		2D18978F2693504700252B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D18978D2693504700252B44 /* LaunchScreen.storyboard */; };
@@ -20,8 +19,7 @@
 		2D18977C2693504000252B44 /* Food journal app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food journal app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D18977F2693504000252B44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D1897812693504000252B44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2D1897832693504000252B44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2D1897862693504000252B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2D1897832693504000252B44 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		2D1897892693504000252B44 /* Food_journal_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food_journal_app.xcdatamodel; sourceTree = "<group>"; };
 		2D18978B2693504700252B44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D18978E2693504700252B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +58,7 @@
 			children = (
 				2D18977F2693504000252B44 /* AppDelegate.swift */,
 				2D1897812693504000252B44 /* SceneDelegate.swift */,
-				2D1897832693504000252B44 /* ViewController.swift */,
-				2D1897852693504000252B44 /* Main.storyboard */,
+				2D1897832693504000252B44 /* AddFoodViewController.swift */,
 				2D18978B2693504700252B44 /* Assets.xcassets */,
 				2D18978D2693504700252B44 /* LaunchScreen.storyboard */,
 				2D1897902693504700252B44 /* Info.plist */,
@@ -129,7 +126,6 @@
 			files = (
 				2D18978F2693504700252B44 /* LaunchScreen.storyboard in Resources */,
 				2D18978C2693504700252B44 /* Assets.xcassets in Resources */,
-				2D1897872693504000252B44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D1897842693504000252B44 /* ViewController.swift in Sources */,
+				2D1897842693504000252B44 /* AddFoodViewController.swift in Sources */,
 				2D1897802693504000252B44 /* AppDelegate.swift in Sources */,
 				2D1897822693504000252B44 /* SceneDelegate.swift in Sources */,
 				2D18978A2693504000252B44 /* Food_journal_app.xcdatamodeld in Sources */,
@@ -150,14 +146,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2D1897852693504000252B44 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2D1897862693504000252B44 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2D18978D2693504700252B44 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,7 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "home.Food-journal-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,7 +307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "home.Food-journal-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
