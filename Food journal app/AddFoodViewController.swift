@@ -8,8 +8,6 @@
 import UIKit
 
 class AddFoodViewController: UIViewController {
-
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     private let foodImage: UIImageView = {
         let image = UIImageView()
@@ -53,6 +51,7 @@ class AddFoodViewController: UIViewController {
         // Setting the navigation bar
         self.navigationItem.title = "Food entry"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(takePhoto))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissView))
         
         // Setting the foot image's view
         view.addSubview(foodImage)
@@ -89,8 +88,9 @@ class AddFoodViewController: UIViewController {
     }
 
     @objc func addFoodJournal() {
-        guard let _ = foodImage.image, let _ = descriptionField.text else { return }
-        
+        guard let image = foodImage.image, let description = descriptionField.text else { return }
+        DatabaseHelper.shared.saveFoodEntry(image: image, description: description, date: Date())
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func takePhoto() {
@@ -100,6 +100,10 @@ class AddFoodViewController: UIViewController {
         picker.sourceType = .camera
         picker.modalPresentationStyle = .fullScreen
         present(picker, animated: true, completion: nil)
+    }
+    
+    @objc func dismissView() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

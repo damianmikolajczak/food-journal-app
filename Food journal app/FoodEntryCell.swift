@@ -9,22 +9,21 @@ import UIKit
 
 class FoodEntryCell: UITableViewCell {
 
-    private let foodImage: UIImageView = {
+    let foodImage: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .systemPink
         return image
     }()
     
-    private let foodDescription: UILabel = {
+    let foodDescription: UILabel = {
         let description = UILabel()
-        description.text = "Some text description"
+        description.textColor = .black
         return description
     }()
     
-    private let entryDate: UILabel = {
+    let entryDate: UILabel = {
         let date = UILabel()
         date.textColor = .lightGray
-        date.text = "Jul 7 2021 "
         return date
         
     }()
@@ -54,16 +53,16 @@ class FoodEntryCell: UITableViewCell {
         // Setting the description
         contentView.addSubview(foodDescription)
         foodDescription.translatesAutoresizingMaskIntoConstraints = false
-        foodDescription.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10.0).isActive = true
-        foodDescription.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 10.0).isActive = true
+        foodDescription.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 30.0).isActive = true
+        foodDescription.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 20.0).isActive = true
         foodDescription.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10.0).isActive = true
         
         // Setting the date
         contentView.addSubview(entryDate)
         entryDate.translatesAutoresizingMaskIntoConstraints = false
-        entryDate.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 10.0).isActive = true
+        entryDate.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 20.0).isActive = true
         entryDate.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10.0).isActive = true
-        entryDate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10.0).isActive = true
+        entryDate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -30.0).isActive = true
     }
     
     required init?(coder: NSCoder) {
