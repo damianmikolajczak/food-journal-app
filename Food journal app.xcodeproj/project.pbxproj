@@ -19,6 +19,10 @@
 		2D1897A72693DAF600252B44 /* FoodEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897A52693DAF600252B44 /* FoodEntry+CoreDataClass.swift */; };
 		2D1897A82693DAF600252B44 /* FoodEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897A62693DAF600252B44 /* FoodEntry+CoreDataProperties.swift */; };
 		2D1897AB269496E400252B44 /* FoodEntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897AA269496E400252B44 /* FoodEntryDetailViewController.swift */; };
+		2DD100832694E65D00B1C0A1 /* filledAddEntry.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2DD1007F2694E65D00B1C0A1 /* filledAddEntry.PNG */; };
+		2DD100842694E65D00B1C0A1 /* mainScreen.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2DD100802694E65D00B1C0A1 /* mainScreen.PNG */; };
+		2DD100852694E65D00B1C0A1 /* emptyAddEntry.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2DD100812694E65D00B1C0A1 /* emptyAddEntry.PNG */; };
+		2DD100862694E65D00B1C0A1 /* detailView.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2DD100822694E65D00B1C0A1 /* detailView.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		2D1897A52693DAF600252B44 /* FoodEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D1897A62693DAF600252B44 /* FoodEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D1897AA269496E400252B44 /* FoodEntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodEntryDetailViewController.swift; sourceTree = "<group>"; };
+		2DD1007F2694E65D00B1C0A1 /* filledAddEntry.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filledAddEntry.PNG; sourceTree = "<group>"; };
+		2DD100802694E65D00B1C0A1 /* mainScreen.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainScreen.PNG; sourceTree = "<group>"; };
+		2DD100812694E65D00B1C0A1 /* emptyAddEntry.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyAddEntry.PNG; sourceTree = "<group>"; };
+		2DD100822694E65D00B1C0A1 /* detailView.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailView.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 		2D18977E2693504000252B44 /* Food journal app */ = {
 			isa = PBXGroup;
 			children = (
+				2DD100762694E5D700B1C0A1 /* Images */,
 				2D1897A92694963A00252B44 /* ViewControllers */,
 				2D18979E2693D25600252B44 /* Models */,
 				2D18977F2693504000252B44 /* AppDelegate.swift */,
@@ -99,6 +108,17 @@
 				2D1897AA269496E400252B44 /* FoodEntryDetailViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2DD100762694E5D700B1C0A1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2DD100822694E65D00B1C0A1 /* detailView.PNG */,
+				2DD100812694E65D00B1C0A1 /* emptyAddEntry.PNG */,
+				2DD1007F2694E65D00B1C0A1 /* filledAddEntry.PNG */,
+				2DD100802694E65D00B1C0A1 /* mainScreen.PNG */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +178,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD100832694E65D00B1C0A1 /* filledAddEntry.PNG in Resources */,
 				2D18978F2693504700252B44 /* LaunchScreen.storyboard in Resources */,
+				2DD100842694E65D00B1C0A1 /* mainScreen.PNG in Resources */,
+				2DD100862694E65D00B1C0A1 /* detailView.PNG in Resources */,
 				2D18978C2693504700252B44 /* Assets.xcassets in Resources */,
+				2DD100852694E65D00B1C0A1 /* emptyAddEntry.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
