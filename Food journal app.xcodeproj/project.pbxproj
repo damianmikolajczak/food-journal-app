@@ -18,6 +18,7 @@
 		2D1897A02693D3B900252B44 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18979F2693D3B900252B44 /* DatabaseHelper.swift */; };
 		2D1897A72693DAF600252B44 /* FoodEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897A52693DAF600252B44 /* FoodEntry+CoreDataClass.swift */; };
 		2D1897A82693DAF600252B44 /* FoodEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897A62693DAF600252B44 /* FoodEntry+CoreDataProperties.swift */; };
+		2D1897AB269496E400252B44 /* FoodEntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1897AA269496E400252B44 /* FoodEntryDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2D18979F2693D3B900252B44 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		2D1897A52693DAF600252B44 /* FoodEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D1897A62693DAF600252B44 /* FoodEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FoodEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D1897AA269496E400252B44 /* FoodEntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodEntryDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +68,12 @@
 		2D18977E2693504000252B44 /* Food journal app */ = {
 			isa = PBXGroup;
 			children = (
+				2D1897A92694963A00252B44 /* ViewControllers */,
 				2D18979E2693D25600252B44 /* Models */,
 				2D18977F2693504000252B44 /* AppDelegate.swift */,
 				2D1897812693504000252B44 /* SceneDelegate.swift */,
 				2D1897962693C57400252B44 /* FoodEntryCell.swift */,
 				2D18979F2693D3B900252B44 /* DatabaseHelper.swift */,
-				2D1897982693CA2E00252B44 /* FoodJournalTableViewController.swift */,
-				2D1897832693504000252B44 /* AddFoodViewController.swift */,
 				2D18978B2693504700252B44 /* Assets.xcassets */,
 				2D18978D2693504700252B44 /* LaunchScreen.storyboard */,
 				2D1897902693504700252B44 /* Info.plist */,
@@ -88,6 +89,16 @@
 				2D1897A62693DAF600252B44 /* FoodEntry+CoreDataProperties.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2D1897A92694963A00252B44 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D1897982693CA2E00252B44 /* FoodJournalTableViewController.swift */,
+				2D1897832693504000252B44 /* AddFoodViewController.swift */,
+				2D1897AA269496E400252B44 /* FoodEntryDetailViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1897AB269496E400252B44 /* FoodEntryDetailViewController.swift in Sources */,
 				2D1897842693504000252B44 /* AddFoodViewController.swift in Sources */,
 				2D1897A02693D3B900252B44 /* DatabaseHelper.swift in Sources */,
 				2D1897992693CA2E00252B44 /* FoodJournalTableViewController.swift in Sources */,

@@ -24,8 +24,7 @@ class FoodJournalTableViewController: UITableViewController {
         view.backgroundColor = .white
         self.navigationItem.title = "My food journal"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewFoodEntry))
-        
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,5 +56,15 @@ class FoodJournalTableViewController: UITableViewController {
         cell.foodDescription.text = foodEntries[indexPath.row].entryDescription
         cell.entryDate.text = dateFormatter.string(from: foodEntries[indexPath.row].entryDate!)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = FoodEntryDetailViewController()
+        vc.foodImage.image = UIImage(data: foodEntries[indexPath.row].foodImage!)
+        vc.entryDescription.text = foodEntries[indexPath.row].entryDescription
+        let nc = UINavigationController(rootViewController: vc)
+        nc.modalPresentationStyle = .popover
+        present(nc, animated: true, completion: nil)
+        
     }
 }

@@ -18,6 +18,7 @@ class FoodEntryCell: UITableViewCell {
     let foodDescription: UILabel = {
         let description = UILabel()
         description.textColor = .black
+        description.numberOfLines = 0
         return description
     }()
     
@@ -41,6 +42,7 @@ class FoodEntryCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        self.backgroundColor = .white
         
         // Setting the image
         contentView.addSubview(foodImage)
